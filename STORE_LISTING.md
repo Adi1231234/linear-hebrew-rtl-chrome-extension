@@ -10,9 +10,9 @@ files (`manifest.json`, `dist/content.js`, `icons/`). Upload that ZIP. **(you)**
 
 ## Listing fields
 
-- **Name:** Linear RTL
+- **Name:** RTL for Linear
 - **Short description (<=132 chars):**
-  Displays right-to-left languages correctly across all of Linear. A line with more than one RTL word becomes RTL.
+  Fixes right-to-left text across Linear. A line with more than one RTL word becomes RTL. Not affiliated with Linear.
 - **Category:** Workflow & Planning
 - **Language:** English
 - **Detailed description:**
@@ -30,6 +30,9 @@ files (`manifest.json`, `dist/content.js`, `icons/`). Upload that ZIP. **(you)**
   - Handles rich-text editors (title, description, comments) as you type.
   - Picks up dynamic content automatically while you scroll and navigate.
   - No configuration, no account, no data collection.
+
+  Not affiliated with, or endorsed by, Linear. "Linear" is a trademark of its respective owner;
+  it is used here only to describe what this extension is compatible with.
 
 ## Privacy (Privacy practices tab) **(you)**
 

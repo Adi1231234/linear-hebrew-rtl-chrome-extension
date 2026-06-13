@@ -1,4 +1,4 @@
-# Linear RTL
+# RTL for Linear
 
 A Chrome extension that displays **right-to-left languages** correctly across all of
 [Linear](https://linear.app).
@@ -6,6 +6,9 @@ A Chrome extension that displays **right-to-left languages** correctly across al
 Any line that contains **more than one RTL word** is switched to right-to-left, so mixed
 RTL/Latin sentences read correctly. A single RTL word inside otherwise-Latin text is left as-is.
 Works for every RTL script (Arabic, Persian, Urdu, and others) via Unicode code-point ranges.
+
+> Not affiliated with, or endorsed by, Linear. "Linear" is a trademark of its respective owner,
+> used here only to describe compatibility.
 
 ## What it handles
 

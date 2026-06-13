@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Linear RTL",
+  "name": "RTL for Linear",
   "version": "2.0.1",
-  "description": "Displays right-to-left languages correctly across all of Linear. A line with more than one RTL word becomes RTL.",
+  "description": "Fixes right-to-left text across Linear. A line with more than one RTL word becomes RTL. Not affiliated with Linear.",
   "author": "Adi Aharoni",
   "homepage_url": "https://github.com/Adi1231234/linear-rtl-chrome-extension",
   "minimum_chrome_version": "120",
