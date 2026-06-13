@@ -137,7 +137,7 @@
     pending.add(node);
     if (!scheduled) {
       scheduled = true;
-      requestAnimationFrame(flush);
+      setTimeout(flush, 0);
     }
   };
   var watch = (target) => {

@@ -1,5 +1,6 @@
-// Dynamic-content tracking - batches DOM mutations into animation frames, observes the tree, and
-// runs a cheap periodic safety re-scan.
+// Dynamic-content tracking - coalesces DOM mutations, observes the tree, and runs a cheap periodic
+// safety re-scan. Batching uses a timer (not requestAnimationFrame): rAF is paused when the tab is
+// not being composited - e.g. occluded or in the background - which would delay newly rendered rows.
 import { scan, processTextNode } from "./scanner";
 
 const pending = new Set<Node>();
@@ -24,7 +25,7 @@ const schedule = (node: Node): void => {
   pending.add(node);
   if (!scheduled) {
     scheduled = true;
-    requestAnimationFrame(flush);
+    setTimeout(flush, 0);
   }
 };
 

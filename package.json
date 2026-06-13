@@ -1,6 +1,6 @@
 {
   "name": "linear-rtl-chrome-extension",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "private": true,
   "type": "module",
   "description": "Chrome extension that displays right-to-left languages correctly across all of Linear.",
