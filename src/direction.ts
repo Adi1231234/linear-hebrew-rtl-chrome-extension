@@ -1,6 +1,6 @@
 // Direction control - applies/reverts text direction for a single element. Owns per-element state.
 import { isRtlLine } from "./rtl-text";
-import { boardCard, isBlock, listMasterGrid } from "./layout";
+import { boardCard, isBlock, isInlineRef, listMasterGrid } from "./layout";
 
 type Direction = "rtl" | "ltr";
 
@@ -35,6 +35,7 @@ const unalign = (el: HTMLElement): void => {
 /** Decide and apply direction for one element that directly holds text. Idempotent, self-healing. */
 export const updateDirection = (el: Element): void => {
   if (!(el instanceof HTMLElement) || el.isContentEditable) return; // editors handled by CSS
+  if (isInlineRef(el)) return; // breadcrumbs / inline mentions read RTL via bidi already
   const previous = lastDirection.get(el);
 
   if (isRtlLine(el.textContent ?? "")) {

@@ -53,6 +53,11 @@
     }
     return grid;
   };
+  var isInlineRef = (el) => {
+    const link = el.closest(`${ISSUE_LINK}, a[href*="/project/"]`);
+    if (!link || getComputedStyle(link).display === "grid") return false;
+    return link.getBoundingClientRect().height <= 56;
+  };
 
   // src/direction.ts
   var lastDirection = /* @__PURE__ */ new WeakMap();
@@ -80,6 +85,7 @@
   };
   var updateDirection = (el) => {
     if (!(el instanceof HTMLElement) || el.isContentEditable) return;
+    if (isInlineRef(el)) return;
     const previous = lastDirection.get(el);
     if (isRtlLine(el.textContent ?? "")) {
       if (previous === "rtl" && el.getAttribute("dir") === "rtl") return;
